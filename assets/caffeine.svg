@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="96" viewBox="0 0 860 96">
+<style>
+text{font-family:'JetBrains Mono','Fira Code',Consolas,Menlo,monospace}
+@keyframes fill{0%{width:0}55%{width:700px}60%,100%{width:693px}} .bar{animation:fill 7s cubic-bezier(.3,.8,.3,1) infinite}
+@keyframes jitter{0%,100%{transform:none}25%{transform:translateX(2px)}75%{transform:translateX(-2px)}}
+@keyframes show1{0%,58%{opacity:1}60%,100%{opacity:0}} @keyframes show2{0%,58%{opacity:0}60%,100%{opacity:1}}
+.t1{animation:show1 7s infinite} .t2{animation:show2 7s infinite} .t2 tspan{animation:jitter .3s infinite}
+@keyframes stripes{to{transform:translateX(24px)}} .st{animation:stripes .6s linear infinite}
+</style>
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00F0FF"/><stop offset="1" stop-color="#FF2BD6"/></linearGradient>
+<pattern id="p" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="24" fill="#ffffff" opacity=".12"/></pattern>
+<clipPath id="cl"><rect x="80" y="44" width="700" height="22" rx="11"/></clipPath></defs>
+<rect x="1" y="1" width="858" height="94" rx="14" fill="#05010f" stroke="#00F0FF" stroke-opacity=".35"/>
+<text x="80" y="32" class="t1" fill="#e8e6ff" style="font-size:14px">☕ loading caffeine into developer.exe ...</text>
+<text x="80" y="32" class="t2" fill="#FF2BD6" style="font-size:14px"><tspan>⚠ stuck at 99%. brb, refilling coffee</tspan></text>
+<rect x="80" y="44" width="700" height="22" rx="11" fill="#160b2e"/>
+<g clip-path="url(#cl)"><rect class="bar" x="80" y="44" width="693" height="22" fill="url(#g)"/><rect class="st" x="56" y="44" width="760" height="22" fill="url(#p)"/></g>
+<text x="792" y="61" fill="#FCEE0A" style="font-size:14px;font-weight:700">99%</text>
+</svg>
